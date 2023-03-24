@@ -28,7 +28,7 @@ def protected_assets():
     session_token = request.headers["Authorization"].split(" ")[1]
     
     try:
-        descope_client = DescopeClient(project_id='P2JkCtMllsmjEl63Y1pIZqUJhcZ4')
+        descope_client = DescopeClient(project_id='__ProjectId__')
         jwt_response = descope_client.validate_session(session_token=session_token)
         print ("Successfully validated user session:")
         # print (jwt_response)
